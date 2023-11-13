@@ -8,13 +8,13 @@ import { getAuth } from 'firebase/auth'
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-	apiKey: 'AIzaSyAjhz_hziY38R64n_P_4Sedxdc80TgGjng',
-	authDomain: 'shopshoes-otp.firebaseapp.com',
-	projectId: 'shopshoes-otp',
-	storageBucket: 'shopshoes-otp.appspot.com',
-	messagingSenderId: '35333464899',
-	appId: '1:35333464899:web:7e7e46199e35779b0305f6',
-	measurementId: 'G-0S1MC9BNHX'
+	apiKey: 'AIzaSyC3Kcvlos-_M7_-td1K3Z6vJB1R912bx9M',
+	authDomain: 'authapp-8c4cc.firebaseapp.com',
+	projectId: 'authapp-8c4cc',
+	storageBucket: 'authapp-8c4cc.appspot.com',
+	messagingSenderId: '934836424428',
+	appId: '1:934836424428:web:7db9212d670410fbf21fc9',
+	measurementId: 'G-6GPW2TX74Q'
 }
 
 // 2 sever cho 100 tin
