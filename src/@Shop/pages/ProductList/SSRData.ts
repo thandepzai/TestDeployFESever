@@ -1,14 +1,16 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { productListService } from '../../services/productListServices'
 import { useRequest } from 'ahooks'
 
 export const getData = () => {
-	let currentPath = ''
+	const [currentPath, setCurrentPath] = useState('')
+	console.log('🚀 ~ file: SSRData.ts:7 ~ getData ~ currentPath:', currentPath)
+
 	const regex = /danh-muc|tim-kiem/
-	if (typeof window !== 'undefined') {
-		currentPath = window.location.pathname
-		console.log('🚀 ~ file: SSRData.ts:10 ~ getData ~ currentPath:', currentPath)
-	}
+	useEffect(() => {
+		setCurrentPath(window.location.pathname)
+	}, [])
+
 	const {
 		data: data,
 		loading: loading,
