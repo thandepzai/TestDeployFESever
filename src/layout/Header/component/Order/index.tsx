@@ -7,7 +7,7 @@ const OrderIcon: React.FC = () => {
 		<div>
 			<Link
 				href="/don-hang"
-				className="relative flex items-center md:pl-6 md:pr-6 md:border-r-slate-300 md:border-l-2 md:border-l-slate-300 z-50"
+				className="relative flex items-center pr-1 md:pl-6 md:pr-6 md:border-r-slate-300 md:border-l-2 md:border-l-slate-300 z-50"
 			>
 				<FaShippingFast style={{ fontSize: '1.6rem' }} />
 			</Link>

@@ -21,6 +21,10 @@ const Header = () => {
 						<div className="md:hidden">
 							<SideBarMenu />
 							<Logo />
+							<div className="absolute right-0 -top-2 pt-2 flex">
+								<OrderIcon />
+								<CartIcon />
+							</div>
 						</div>
 					</div>
 					<hr className="md:hidden mt-2" />
@@ -32,7 +36,7 @@ const Header = () => {
 						<div className="flex-grow">
 							<SearchBar />
 						</div>
-						<div className="ltr:ml-2 rtl:mr-2 smml-4 ml-4 flex items-center justify-between ">
+						<div className="ltr:ml-2 rtl:mr-2 smml-4 ml-4 items-center justify-between hidden md:flex">
 							<OrderIcon />
 							<CartIcon />
 						</div>

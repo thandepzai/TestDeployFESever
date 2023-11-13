@@ -7,6 +7,7 @@ export const getData = () => {
 	const regex = /danh-muc|tim-kiem/
 	if (typeof window !== 'undefined') {
 		currentPath = window.location.pathname
+		console.log('🚀 ~ file: SSRData.ts:10 ~ getData ~ currentPath:', currentPath)
 	}
 	const {
 		data: data,

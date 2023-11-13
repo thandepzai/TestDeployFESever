@@ -35,16 +35,13 @@ const CarouselBoxCard: React.FC<Props> = ({ product }) => {
 					/>
 				</div>
 				<p className="truncate">{product.name}</p>
-				<div className="flex rtl:justify-end rtl:self-end ltr:self-start text-left mt-2">
-					<div>
-						<div
-							className="flex items-center text-md md:text-lg font-bold no-underline"
-							style={{ flexDirection: 'row' }}
-						>
-							<sup className="mr-1 rtl:block">₫</sup>
-							<span>{minPrices}</span>
-							<sub className="ml-1 text-[10px]" />
-						</div>
+				<div className="flex rtl:justify-end rtl:self-end ltr:self-start text-left mt-2 w-full">
+					<div
+						className="flex items-center text-md md:text-lg font-bold no-underline w-full"
+						style={{ flexDirection: 'row' }}
+					>
+						<sup className="mr-1 rtl:block">₫</sup>
+						<span className="truncate">{minPrices}</span>
 					</div>
 				</div>
 			</div>
