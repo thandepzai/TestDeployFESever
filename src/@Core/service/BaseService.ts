@@ -13,7 +13,7 @@ interface findProps {
 
 export class BaseService {
 	BASE_URL =
-		process.env.NODE_ENV !== 'development'
+		process.env.NODE_ENV === 'development'
 			? 'http://localhost:3000/api/v1'
 			: 'https://test-deploy-sever.vercel.app/api/v1'
 	BASE_ENDPOINT: string | undefined = ''
