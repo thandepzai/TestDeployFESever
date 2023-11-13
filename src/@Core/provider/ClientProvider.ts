@@ -7,8 +7,8 @@ import { useRequest } from 'ahooks'
 import { useEffect } from 'react'
 
 class ProductSession extends BaseService {}
-const productSessionService = new ProductSession('http://trainsuggest.pythonanywhere.com/get-suggest/')
-const productSimilarService = new ProductSession('http://trainsuggest.pythonanywhere.com/get-similar/')
+const productSessionService = new ProductSession('https://trainsuggest.pythonanywhere.com/get-suggest/')
+const productSimilarService = new ProductSession('https://trainsuggest.pythonanywhere.com/get-similar/')
 
 interface ProductSession {
 	code: string

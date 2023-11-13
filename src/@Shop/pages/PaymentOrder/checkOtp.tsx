@@ -176,8 +176,8 @@ const CheckOtp: React.FC<Props> = ({ dataSend, setChangeStatus, cart }) => {
 									Gửi mã SMS
 								</button>
 								<button
-									// onClick={() => setChangeStatus(true)}
-									onClick={() => setChekOrder(true)}
+									onClick={() => setChangeStatus(true)}
+									// onClick={() => setChekOrder(true)}
 									className="bg-emerald-900 w-full flex gap-1 items-center justify-center py-2.5 text-white rounded"
 								>
 									Quay lại

@@ -5,6 +5,7 @@ import SearchBar from './component/SearchBar'
 import CartIcon from './component/Cart'
 import CategoryIcon from './component/Category'
 import SideBarMenu from './component/SideBarMenu'
+import OrderIcon from './component/Order'
 
 const Header = () => {
 	const [openMenu, setOpenMenu] = useState(false)
@@ -32,6 +33,7 @@ const Header = () => {
 							<SearchBar />
 						</div>
 						<div className="ltr:ml-2 rtl:mr-2 smml-4 ml-4 flex items-center justify-between ">
+							<OrderIcon />
 							<CartIcon />
 						</div>
 					</div>
