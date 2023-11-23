@@ -23,6 +23,7 @@
 		"ahooks": "^3.7.8",
 		"bcrypt": "^5.1.0",
 		"clsx": "^2.0.0",
+		"crypto": "^1.0.1",
 		"eslint": "8.38.0",
 		"eslint-config-next": "13.3.0",
 		"firebase": "^10.5.0",
@@ -33,6 +34,7 @@
 		"nodemailer": "^6.9.2",
 		"npm": "^9.8.1",
 		"prisma": "4.14.0",
+		"qs": "^6.11.2",
 		"query-string": "^8.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
@@ -53,6 +55,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^20.0.0",
+		"@types/qs": "^6.9.10",
 		"autoprefixer": "^10.4.14",
 		"postcss": "^8.4.27",
 		"ts-node": "^10.9.1",

@@ -4,7 +4,6 @@ import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { useStorage } from '../hooks'
 import { STORAGE } from '../const/app-const'
-import { useCheckProduct } from '../hooks/useCheckProduct'
 
 type Props = {
 	children: ReactNode

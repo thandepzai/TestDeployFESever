@@ -20,7 +20,8 @@ const DetailOrderComponent: React.FC<Props> = ({ order, SetShowOtp }) => {
 		CONFIRM: ' Đã xác nhận',
 		SHIPPING: ' Đang giao hàng',
 		CANCELED: ' Đã hủy',
-		DONE: ' Thành công'
+		DONE: ' Thành công',
+		REFUND: ' Chờ hoàn tiền'
 	}
 
 	return (
@@ -61,6 +62,7 @@ const DetailOrderComponent: React.FC<Props> = ({ order, SetShowOtp }) => {
 												| 'SHIPPING'
 												| 'CANCELED'
 												| 'DONE'
+												| 'REFUND'
 										]
 									}
 								</p>

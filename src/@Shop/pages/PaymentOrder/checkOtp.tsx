@@ -7,7 +7,7 @@ import 'react-phone-input-2/lib/style.css'
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth'
 import { Toaster } from 'react-hot-toast'
 import { toast } from 'react-toastify'
-import { auth } from './firebase.config'
+import { auth } from '../../../../config/firebase.config'
 import { LoadingIcon, SuccessIcon } from '@/src/@Core/components/paymentIcon'
 import { createData } from './SSRData'
 interface Inputs {
@@ -19,11 +19,11 @@ interface Inputs {
 }
 interface Props {
 	dataSend: Inputs | undefined
-	setChangeStatus: (value: SetStateAction<boolean>) => void
+	setPaymentMethod: (value: SetStateAction<string>) => void
 	cart: any
 }
 declare const window: any
-const CheckOtp: React.FC<Props> = ({ dataSend, setChangeStatus, cart }) => {
+const CheckOtp: React.FC<Props> = ({ dataSend, setPaymentMethod, cart }) => {
 	const [otp, setOtp] = useState('')
 	const [ph, setPh] = useState(`+84 ${String(dataSend?.phone)}`)
 	const [loading, setLoading] = useState(false)
@@ -57,7 +57,7 @@ const CheckOtp: React.FC<Props> = ({ dataSend, setChangeStatus, cart }) => {
 				amount: sumPrice,
 				quantity: sumQuantity,
 				method: paymentMethod,
-				note: 'Khong co'
+				note: ''
 			}
 			createOrder({ items, customerInfo, paymentInfo })
 		}
@@ -176,7 +176,7 @@ const CheckOtp: React.FC<Props> = ({ dataSend, setChangeStatus, cart }) => {
 									Gửi mã SMS
 								</button>
 								<button
-									onClick={() => setChangeStatus(true)}
+									onClick={() => setPaymentMethod('')}
 									// onClick={() => setChekOrder(true)}
 									className="bg-emerald-900 w-full flex gap-1 items-center justify-center py-2.5 text-white rounded"
 								>

@@ -84,8 +84,8 @@ const ImportInfo: React.FC<Params> = ({ onSubmit, dataSend }) => {
 						{...register('paymentMethod', { required: true })}
 						className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 					>
-						<option value="cash">Thanh toán khi nhận hàng</option>
-						<option value="wallet">Thanh toán qua ví điện tử</option>
+						<option value="receive">Thanh toán khi nhận hàng</option>
+						<option value="online">Thanh toán online</option>
 					</select>
 					{renderError('paymentMethod')}
 				</div>

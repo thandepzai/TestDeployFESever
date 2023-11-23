@@ -7,7 +7,7 @@ import 'react-phone-input-2/lib/style.css'
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth'
 import { Toaster } from 'react-hot-toast'
 import { toast } from 'react-toastify'
-import { auth } from '../../PaymentOrder/firebase.config'
+import { auth } from '../../../../../config/firebase.config'
 import { LoadingIcon, SuccessIcon } from '@/src/@Core/components/paymentIcon'
 import { RemoveCart } from './SSRData'
 

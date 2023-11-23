@@ -21,8 +21,10 @@ export const clientProvider = () => {
 	const productSessionOld: ProductSession[] = []
 
 	productOrder.forEach((item: any) => {
-		const codeProduct = item.codeProduct
-		productSessionOld.push(...codeProduct)
+		if (item !== null) {
+			const codeProduct = item.codeProduct
+			productSessionOld.push(...codeProduct)
+		}
 	})
 
 	cart.forEach((item: any) => {

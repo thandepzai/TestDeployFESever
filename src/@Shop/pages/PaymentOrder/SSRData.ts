@@ -10,6 +10,8 @@ import { STORAGE } from '@/src/const/app-const'
 export function createData() {
 	const router = useRouter()
 	const [order, setOrder] = useStorage(STORAGE.LOCAL, 'order', [])
+	const [dataSend, setDadaSend] = useStorage(STORAGE.LOCAL, 'user', {})
+
 	const { removeCart } = useCartContext()
 
 	const { run: createOrder } = useRequest(orderService.save, {
@@ -20,6 +22,7 @@ export function createData() {
 				toast.success(data.msg)
 				removeCart()
 				setOrder([...order, data.data])
+				setDadaSend({})
 				router.push(`/don-hang/${data.data.code}`)
 			}
 		},

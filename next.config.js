@@ -12,7 +12,7 @@ const nextConfig = {
 			formats: ['image/webp']
 		}
 	},
-	reactStrictMode: true,
+	reactStrictMode: false,
 	images: {
 		remotePatterns: [
 			{
