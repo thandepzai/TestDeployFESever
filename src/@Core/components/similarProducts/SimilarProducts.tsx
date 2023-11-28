@@ -12,7 +12,7 @@ const SimilarProducts: React.FC<Props> = ({ code }) => {
 			<CarouselBox title="Sản phẩm tương tự" full={true} checked={checked}>
 				{!checked &&
 					productSimilar.map(
-						(product: any, key: number) => key !== 0 && <CarouselBoxCard key={key} product={product[0]} />
+						(product: any, key: number) => key !== 0 && <CarouselBoxCard key={key} product={product} />
 					)}
 			</CarouselBox>
 		</div>
