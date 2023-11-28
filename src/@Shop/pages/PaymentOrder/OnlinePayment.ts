@@ -44,11 +44,13 @@ export const processingPayment = (dataSend: Inputs | undefined, cart: any) => {
 	let createDate = moment(date).format('YYYYMMDDHHmmss')
 
 	const ipAddr = window?.location?.hostname || window?.location?.host || window?.location?.href || ''
+	const currentURL = window.location.href
+	const baseURL = currentURL.split('/').slice(0, 3).join('/')
 
 	let tmnCode = onlinePaymentConfig.vnp_TmnCode
 	let secretKey = onlinePaymentConfig.vnp_HashSecret
 	let vnpUrl = onlinePaymentConfig.vnp_Url
-	let returnUrl = onlinePaymentConfig.vnp_ReturnUrl
+	let returnUrl = `${baseURL}/thanh-toan/online`
 	let orderId = moment(date).format('DDHHmmss')
 	let amount = sumPrice
 	let bankCode = ''

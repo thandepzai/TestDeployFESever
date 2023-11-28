@@ -1,7 +1,6 @@
 import React from 'react'
 import { CarouselBoxCard, CarouselBox } from '@/src/@Core/components'
 import { getSimilar } from '@/src/@Core/provider/ClientProvider'
-import CartLoading from '../loading/CartLoading'
 interface Props {
 	code: string
 }

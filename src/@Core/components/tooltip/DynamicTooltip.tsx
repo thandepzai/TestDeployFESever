@@ -1,9 +1,6 @@
 'use client'
 import { ReactNode, useState } from 'react'
 
-// interface DynamicTooltipProps {
-// 	children: ReactNode
-// }
 export const useDynamicToolTip = (children: ReactNode) => {
 	const [tooltipVisible, setTooltipVisible] = useState(false)
 	const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 })

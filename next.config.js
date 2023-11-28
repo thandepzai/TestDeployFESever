@@ -8,7 +8,7 @@ const nextConfig = {
 	},
 	serverRuntimeConfig: {
 		images: {
-			domains: ['ikunmdgrxuoyltqjiolb.supabase.co'],
+			domains: ['*'],
 			formats: ['image/webp']
 		}
 	},
@@ -17,7 +17,7 @@ const nextConfig = {
 		remotePatterns: [
 			{
 				protocol: 'https',
-				hostname: 'ikunmdgrxuoyltqjiolb.supabase.co',
+				hostname: '*',
 				port: '',
 				pathname: '/storage/v1/object/public/**'
 			},

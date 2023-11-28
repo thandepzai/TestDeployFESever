@@ -3,9 +3,9 @@ import { Carousel, Benefits, Offers } from '@/src/@Core/components'
 import Brands from '@/src/@Core/components/brands'
 import Newest from '@/src/@Core/components/newest/Newest'
 import CoreSpinner from '@/src/@Core/components/spinner/CoreSpinner'
-import { getSession } from '@/src/@Core/provider/ClientProvider'
 import React from 'react'
 import { getData } from './SSRData'
+
 const Home = () => {
 	const { products, handleUpdatePageSize } = getData()
 

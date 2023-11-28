@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from 'react'
 import DetailOrderComponent from './detailOrderComponent'
 import CheckOtp from './checkOtp'

@@ -1,14 +1,14 @@
 'use client'
 import { useStorage } from '@/src/hooks'
-import { STORAGE } from '@/src/const/app-const'
+import { SESSION_SERVICE, SIMILAR_SERVICE, STORAGE } from '@/src/const/app-const'
 import { useCartContext } from '@/src/contexts/CartContext'
 import { BaseService } from '@/src/@Core/service/BaseService'
 import { useRequest } from 'ahooks'
 import { useEffect } from 'react'
 
 class ProductSession extends BaseService {}
-const productSessionService = new ProductSession('https://trainsuggest.pythonanywhere.com/get-suggest/')
-const productSimilarService = new ProductSession('https://trainsuggest.pythonanywhere.com/get-similar/')
+const productSessionService = new ProductSession(SESSION_SERVICE)
+const productSimilarService = new ProductSession(SIMILAR_SERVICE)
 
 interface ProductSession {
 	code: string
@@ -33,8 +33,8 @@ export const clientProvider = () => {
 
 	function addProductView(code: string) {
 		if (productView.length === 0 || productView[productView.length - 1] !== code) {
-			productView.push(code)
-			setProductView(productView)
+			const newProductView = [...productView, code]
+			setProductView(newProductView)
 		}
 	}
 
