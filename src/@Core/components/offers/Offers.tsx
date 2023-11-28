@@ -11,9 +11,9 @@ const Offers = () => {
 		<div className="md:mt-10 w-full xl:max-w-[2100px] mx-auto">
 			<CarouselBox title="Gợi Ý" className="bg-offersBG" href="/" checked={checked}>
 				{!checked &&
-					productSuggest.map((product: any) => {
-						return <CarouselBoxCard key={product.name} product={product} />
-					})}
+					productSuggest.map(
+						(product: any, key: number) => key !== 0 && <CarouselBoxCard key={key} product={product[0]} />
+					)}
 			</CarouselBox>
 		</div>
 	)

@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-// import ProductPrice from "../ProductPrice";
 
 interface Props {
 	product: any
@@ -10,14 +9,14 @@ interface Props {
 
 const CarouselBoxCard: React.FC<Props> = ({ product }) => {
 	const router = useRouter()
-	const minPrices = product.minPrice.toLocaleString('vi-VN', {
+	const minPrices = product?.minPrice.toLocaleString('vi-VN', {
 		style: 'currency',
 		currency: 'VND',
 		currencyDisplay: 'code'
 	})
-	const listImages = JSON.parse(product.images) as string[]
+	const listImages = JSON.parse(product?.images) as string[]
 	const handleGetDetail = () => {
-		router.push(`/san-pham/${product.id}`)
+		router.push(`/san-pham/${product?.id}`)
 	}
 	return (
 		<div className="w-full h-full px-2 my-2">
@@ -34,7 +33,7 @@ const CarouselBoxCard: React.FC<Props> = ({ product }) => {
 						className="object-contain hover:scale-105 transition-transform !p-2"
 					/>
 				</div>
-				<p className="truncate">{product.name}</p>
+				<p className="truncate">{product?.name}</p>
 				<div className="flex rtl:justify-end rtl:self-end ltr:self-start text-left mt-2 w-full">
 					<div
 						className="flex items-center text-md md:text-lg font-bold no-underline w-full"
