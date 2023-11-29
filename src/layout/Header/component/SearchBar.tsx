@@ -16,7 +16,12 @@ const SearchBar = () => {
 				className="px-4 py-2 md:py-3 bg-transparent outline-none w-3/5 sm:w-3/4 lg:w-10/12"
 				type="search"
 				placeholder="Nhập để tìm kiếm"
-				onBlur={e => setTextFind(e.target.value)}
+				onChange={e => setTextFind(e.target.value)}
+				onKeyDown={e => {
+					if (e.key === 'Enter') {
+						handleSearch()
+					}
+				}}
 			/>
 			<button
 				onClick={handleSearch}

@@ -55,8 +55,13 @@ const Orders: React.FC = () => {
 					<input
 						className="px-4 py-2 md:py-3 bg-transparent outline-none w-full md:w-2/3 lg:w-10/12 my-3 border-2 rounded-xl"
 						type="search"
-						onBlur={e => setValue(e.target.value)}
+						onChange={e => setValue(e.target.value)}
 						placeholder="Nhập để tìm kiếm"
+						onKeyDown={e => {
+							if (e.key === 'Enter') {
+								handleFindOrder()
+							}
+						}}
 					/>
 					<button
 						onClick={handleFindOrder}
