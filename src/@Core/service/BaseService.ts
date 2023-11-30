@@ -12,7 +12,7 @@ interface findProps {
 }
 
 export class BaseService {
-	BASE_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000/api/v1' : BACKEND_SEVER
+	BASE_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000/api' : BACKEND_SEVER
 	BASE_ENDPOINT: string | undefined = ''
 	constructor(endpoint?: string) {
 		this.BASE_ENDPOINT = endpoint
